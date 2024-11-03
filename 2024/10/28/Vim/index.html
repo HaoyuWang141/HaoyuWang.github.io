@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>Vim | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Vim CommandsVim Motions 123      ↑← h j k l →    ↓   w - word forward (W) b - word backward (B) e - end of word (E) ge - end of word backward (gE) f&amp;#123;char&amp;#125; - find character forward F&amp;#123;cha">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Vim">
+<meta property="og:url" content="https://haoyuwang141.github.io/2024/10/28/Vim/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="Vim CommandsVim Motions 123      ↑← h j k l →    ↓   w - word forward (W) b - word backward (B) e - end of word (E) ge - end of word backward (gE) f&amp;#123;char&amp;#125; - find character forward F&amp;#123;cha">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2024-10-28T13:49:11.000Z">
+<meta property="article:modified_time" content="2024-10-28T14:02:46.994Z">
+<meta property="article:author" content="Haoyu Wang">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://haoyuwang141.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-Vim" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2024/10/28/Vim/" class="article-date">
+  <time class="dt-published" datetime="2024-10-28T13:49:11.000Z" itemprop="datePublished">2024-10-28</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      Vim
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h2 id="Vim-Commands"><a href="#Vim-Commands" class="headerlink" title="Vim Commands"></a>Vim Commands</h2><h3 id="Vim-Motions"><a href="#Vim-Motions" class="headerlink" title="Vim Motions"></a>Vim Motions</h3><blockquote>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">      ↑</span><br><span class="line">← h j k l →</span><br><span class="line">    ↓</span><br></pre></td></tr></table></figure>
+</blockquote>
+<ul>
+<li><code>w</code> - word forward (<code>W</code>)</li>
+<li><code>b</code> - word backward (<code>B</code>)</li>
+<li><code>e</code> - end of word (<code>E</code>)</li>
+<li><code>ge</code> - end of word backward (<code>gE</code>)</li>
+<li><code>f&#123;char&#125;</code> - find character forward</li>
+<li><code>F&#123;char&#125;</code> - find character backward</li>
+<li><code>t&#123;char&#125;</code> - till character forward</li>
+<li><code>T&#123;char&#125;</code> - till character backward</li>
+<li><code>;</code> - repeat last <code>f</code>, <code>t</code>, <code>F</code>, or <code>T</code> command</li>
+<li><code>,</code> - repeat last <code>f</code>, <code>t</code>, <code>F</code>, or <code>T</code> command in opposite direction</li>
+<li><code>0</code> - beginning of line</li>
+<li><code>^</code> - first non-blank character of line</li>
+<li><code>$</code> - end of line</li>
+<li><code>g_</code> - last non-blank character of line</li>
+<li><code>&#125;</code> - next paragraph</li>
+<li><code>&#123;</code> - previous paragraph</li>
+<li><code>)</code> - next sentence</li>
+<li><code>(</code> - previous sentence</li>
+<li><code>]]</code> - next section or function</li>
+<li><code>[[</code> - previous section or function</li>
+<li><code>]m</code> - next method</li>
+<li><code>[m</code> - previous method</li>
+<li><code>]M</code> - next class or block</li>
+<li><code>[M</code> - previous class or block</li>
+<li><code>Ctrl+d</code> - down half screen</li>
+<li><code>Ctrl+u</code> - up half screen</li>
+<li><code>Ctrl+f</code> - down full screen</li>
+<li><code>Ctrl+b</code> - up full screen</li>
+<li><code>gg</code> - first line</li>
+<li><code>&#123;line&#125;gg</code> - go to line <code>&#123;line&#125;</code></li>
+<li><code>G</code> - last line</li>
+<li><code>%</code> - matching parenthesis</li>
+<li><code>:n</code> - go to line <code>n</code></li>
+<li><code>&#39;&#39;</code> - jump back to the line where the cursor was before the latest jump</li>
+<li><code>/&#123;pattern&#125;</code> - search forward for <code>&#123;pattern&#125;</code></li>
+<li><code>?&#123;pattern&#125;</code> - search backward for <code>&#123;pattern&#125;</code></li>
+<li><code>n</code> - repeat search in same direction</li>
+<li><code>N</code> - repeat search in opposite direction</li>
+<li><code>*</code> - search forward for the word nearest to the cursor</li>
+</ul>
+<h3 id="Vim-Editing"><a href="#Vim-Editing" class="headerlink" title="Vim Editing"></a>Vim Editing</h3><ul>
+<li><code>i</code> - insert before cursor</li>
+<li><code>I</code> - insert at the beginning of the line</li>
+<li><code>a</code> - insert after cursor</li>
+<li><code>A</code> - insert at the end of the line</li>
+<li><code>o</code> - insert a new line below the current line</li>
+<li><code>O</code> - insert a new line above the current line</li>
+<li><code>r</code> - replace one character</li>
+<li><code>R</code> - replace multiple characters</li>
+<li><code>s</code> - substitute one character</li>
+<li><code>S</code> - substitute entire line</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://haoyuwang141.github.io/2024/10/28/Vim/" data-id="cm31lix1z0002i4rscwvp0yat" data-title="Vim" class="article-share-link">Share</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2024/10/29/Java-keyword/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Java keyword transient
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2024/10/28/hexo/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">hexo</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%AE%97%E6%B3%95/" rel="tag">算法</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/%E7%AE%97%E6%B3%95/" style="font-size: 10px;">算法</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/11/">November 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/10/">October 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/06/">June 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/05/">May 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/04/">April 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/03/">March 2023</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2024/11/03/Java/">Java</a>
+          </li>
+        
+          <li>
+            <a href="/2024/10/29/Java-keyword/">Java keyword transient</a>
+          </li>
+        
+          <li>
+            <a href="/2024/10/28/Vim/">Vim</a>
+          </li>
+        
+          <li>
+            <a href="/2024/10/28/hexo/">hexo</a>
+          </li>
+        
+          <li>
+            <a href="/2023/06/13/venv/">venv</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2024 Haoyu Wang<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.4.1.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>

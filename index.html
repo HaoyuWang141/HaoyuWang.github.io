@@ -1,0 +1,941 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="https://haoyuwang141.github.io/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:locale" content="en_US">
+<meta property="article:author" content="Haoyu Wang">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://haoyuwang141.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main">
+  
+    <article id="post-Java" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2024/11/03/Java/" class="article-date">
+  <time class="dt-published" datetime="2024-11-03T01:15:05.000Z" itemprop="datePublished">2024-11-03</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2024/11/03/Java/">Java</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h2 id="Java"><a href="#Java" class="headerlink" title="Java"></a>Java</h2><h3 id="Basic"><a href="#Basic" class="headerlink" title="Basic"></a>Basic</h3><h4 id="Variable"><a href="#Variable" class="headerlink" title="Variable"></a>Variable</h4><p>基本数据类型：数值型、字符型、布尔型</p>
+<p>类型转换：自动（精度损失）、强制</p>
+<p>引用数据类型：class, interface, array, enum, annotation</p>
+<p>包装箱与拆装箱：BOX</p>
+<h4 id="Control-Process"><a href="#Control-Process" class="headerlink" title="Control Process"></a>Control Process</h4><p>if…else if…else; switch case; for&#x2F;foreach; while; do…while</p>
+<h4 id="Object-Oriented"><a href="#Object-Oriented" class="headerlink" title="Object-Oriented"></a>Object-Oriented</h4><p>Class, Abstract Class, Interface</p>
+<p>Encapsulation, Inharitance, Polymorphism</p>
+<p>Override(!!!: Non-private, Non-static), Overload, Hide</p>
+<p>代码块、静态代码块</p>
+<p>权限修饰符：private, (default), protected, public</p>
+<p>Sealed Class(密封类)</p>
+<h4 id="Exception"><a href="#Exception" class="headerlink" title="Exception"></a>Exception</h4><p>try…catch…finally: notice “return”</p>
+<p>throw&#x2F;throws</p>
+<p>try-with-source: jdk8引入，jdk9升级为：try(read; bufferedRead)</p>
+<h4 id="代码组织管理"><a href="#代码组织管理" class="headerlink" title="代码组织管理"></a>代码组织管理</h4><p>Module(模块化): module, requires, export, opens, provides, uses</p>
+<p>module-info.java</p>
+<p>大型项目常基于DDD方式提供整洁架构</p>
+<ul>
+<li>application：应用层，组合和编排</li>
+<li>domain：核心业务逻辑</li>
+<li>infrastructure：基础层</li>
+<li>interfeces：用户接口层</li>
+</ul>
+<h3 id="Core"><a href="#Core" class="headerlink" title="Core"></a>Core</h3><h4 id="Reflection"><a href="#Reflection" class="headerlink" title="Reflection"></a>Reflection</h4><p>Class.forName, Obj.class, getClass(), loadClass()</p>
+<p>field&#x2F;method&#x2F;other info</p>
+<p><strong>Proxy (代理)</strong></p>
+<p>常用于日志、鉴权等通用功能</p>
+<ul>
+<li>静态代理：代理类和委托类的关系在运行前确定，但是要写的代码很多；</li>
+<li>动态代理：<ul>
+<li>JDK代理：java.lang.reflection中的InvocationHandler接口和Proxy类</li>
+<li>cglib第三方包</li>
+</ul>
+</li>
+</ul>
+<h4 id="Collection"><a href="#Collection" class="headerlink" title="Collection"></a>Collection</h4><p>List: ArrayList, LinkedList, Queue, Vector(线程安全)</p>
+<p>Set: HashSet, TreeSet(有序)</p>
+<p>Map: HashMap(Key无序), TreeMap(Key有序), HashTable(线程安全)</p>
+<p>Iterator for Iterable</p>
+<p>Stream and Lambda：ParallelStream</p>
+<p>集合工具类（Collections&#x2F;Arrays）</p>
+<h4 id="Generics"><a href="#Generics" class="headerlink" title="Generics"></a>Generics</h4><p>泛型</p>
+<h4 id="Multi-threading"><a href="#Multi-threading" class="headerlink" title="Multi-threading"></a>Multi-threading</h4><p><code>extends Thread</code> or <code>implements Runnable</code></p>
+<p><code>thread.start</code></p>
+<p>Thread Pool Executor</p>
+<p><strong>线程间通信</strong></p>
+<h3 id="Extend"><a href="#Extend" class="headerlink" title="Extend"></a>Extend</h3><h4 id="I-x2F-O"><a href="#I-x2F-O" class="headerlink" title="I&#x2F;O"></a>I&#x2F;O</h4><p>BIO: InputStream&#x2F;OutputStream, Reader&#x2F;Writer, Buffered</p>
+<p>NIO (Non-block): Channel + Buffer, Selector</p>
+<p>Netty 框架</p>
+<h4 id="Regular-Expression"><a href="#Regular-Expression" class="headerlink" title="Regular Expression"></a>Regular Expression</h4><h4 id="Database"><a href="#Database" class="headerlink" title="Database"></a>Database</h4><p>JDBC (Java Database Connectivity): </p>
+<p>ORM (Object Relation Mapping): 这是一种思想</p>
+<p>JPA (Java Persistance API): 是java持久化规范，是ORM框架的标准</p>
+<p>Mabatis：不严格遵循JPA规范</p>
+<h4 id="Network"><a href="#Network" class="headerlink" title="Network"></a>Network</h4><p>Socket (套接字): 实时双向通信</p>
+<p>REST：HTTP协议进行网络通信</p>
+<p>WebSocket: 基于TCP协议的应用层协议，通过HTTP&#x2F;HTTPs协议建立起双向通信的通道，实现实时数据传输</p>
+<h4 id="Security-安全类库"><a href="#Security-安全类库" class="headerlink" title="Security (安全类库)"></a>Security (安全类库)</h4><p>SecurityManager</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://haoyuwang141.github.io/2024/11/03/Java/" data-id="cm31lix1y0001i4rsaa7y8a5p" data-title="Java" class="article-share-link">Share</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-Java-keyword" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2024/10/29/Java-keyword/" class="article-date">
+  <time class="dt-published" datetime="2024-10-29T06:30:48.000Z" itemprop="datePublished">2024-10-29</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2024/10/29/Java-keyword/">Java keyword transient</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h2 id="Transient"><a href="#Transient" class="headerlink" title="Transient"></a>Transient</h2><p>被transient修饰的变量不会被序列化，即不会被保存到文件中。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">User</span> <span class="keyword">implements</span> <span class="title class_">Serializable</span> &#123;</span><br><span class="line">    <span class="keyword">private</span> String name;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">transient</span> String password;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="Volatile"><a href="#Volatile" class="headerlink" title="Volatile"></a>Volatile</h2><p>被volatile修饰的变量，保证了线程之间的可见性，即一个线程修改了这个变量的值，其他线程能够立即看到这个修改。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">TestInstance</span> &#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">volatile</span> <span class="keyword">static</span> TestInstance instance;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> TestInstance <span class="title function_">getInstance</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="keyword">if</span> (instance == <span class="literal">null</span>) &#123;</span><br><span class="line">            <span class="keyword">synchronized</span> (TestInstance.class) &#123;</span><br><span class="line">                <span class="keyword">if</span> (instance == <span class="literal">null</span>) &#123;</span><br><span class="line">                    instance = <span class="keyword">new</span> <span class="title class_">TestInstance</span>();</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> instance;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://haoyuwang141.github.io/2024/10/29/Java-keyword/" data-id="cm31lix1v0000i4rscgyy72hg" data-title="Java keyword transient" class="article-share-link">Share</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-Vim" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2024/10/28/Vim/" class="article-date">
+  <time class="dt-published" datetime="2024-10-28T13:49:11.000Z" itemprop="datePublished">2024-10-28</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2024/10/28/Vim/">Vim</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h2 id="Vim-Commands"><a href="#Vim-Commands" class="headerlink" title="Vim Commands"></a>Vim Commands</h2><h3 id="Vim-Motions"><a href="#Vim-Motions" class="headerlink" title="Vim Motions"></a>Vim Motions</h3><blockquote>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">      ↑</span><br><span class="line">← h j k l →</span><br><span class="line">    ↓</span><br></pre></td></tr></table></figure>
+</blockquote>
+<ul>
+<li><code>w</code> - word forward (<code>W</code>)</li>
+<li><code>b</code> - word backward (<code>B</code>)</li>
+<li><code>e</code> - end of word (<code>E</code>)</li>
+<li><code>ge</code> - end of word backward (<code>gE</code>)</li>
+<li><code>f&#123;char&#125;</code> - find character forward</li>
+<li><code>F&#123;char&#125;</code> - find character backward</li>
+<li><code>t&#123;char&#125;</code> - till character forward</li>
+<li><code>T&#123;char&#125;</code> - till character backward</li>
+<li><code>;</code> - repeat last <code>f</code>, <code>t</code>, <code>F</code>, or <code>T</code> command</li>
+<li><code>,</code> - repeat last <code>f</code>, <code>t</code>, <code>F</code>, or <code>T</code> command in opposite direction</li>
+<li><code>0</code> - beginning of line</li>
+<li><code>^</code> - first non-blank character of line</li>
+<li><code>$</code> - end of line</li>
+<li><code>g_</code> - last non-blank character of line</li>
+<li><code>&#125;</code> - next paragraph</li>
+<li><code>&#123;</code> - previous paragraph</li>
+<li><code>)</code> - next sentence</li>
+<li><code>(</code> - previous sentence</li>
+<li><code>]]</code> - next section or function</li>
+<li><code>[[</code> - previous section or function</li>
+<li><code>]m</code> - next method</li>
+<li><code>[m</code> - previous method</li>
+<li><code>]M</code> - next class or block</li>
+<li><code>[M</code> - previous class or block</li>
+<li><code>Ctrl+d</code> - down half screen</li>
+<li><code>Ctrl+u</code> - up half screen</li>
+<li><code>Ctrl+f</code> - down full screen</li>
+<li><code>Ctrl+b</code> - up full screen</li>
+<li><code>gg</code> - first line</li>
+<li><code>&#123;line&#125;gg</code> - go to line <code>&#123;line&#125;</code></li>
+<li><code>G</code> - last line</li>
+<li><code>%</code> - matching parenthesis</li>
+<li><code>:n</code> - go to line <code>n</code></li>
+<li><code>&#39;&#39;</code> - jump back to the line where the cursor was before the latest jump</li>
+<li><code>/&#123;pattern&#125;</code> - search forward for <code>&#123;pattern&#125;</code></li>
+<li><code>?&#123;pattern&#125;</code> - search backward for <code>&#123;pattern&#125;</code></li>
+<li><code>n</code> - repeat search in same direction</li>
+<li><code>N</code> - repeat search in opposite direction</li>
+<li><code>*</code> - search forward for the word nearest to the cursor</li>
+</ul>
+<h3 id="Vim-Editing"><a href="#Vim-Editing" class="headerlink" title="Vim Editing"></a>Vim Editing</h3><ul>
+<li><code>i</code> - insert before cursor</li>
+<li><code>I</code> - insert at the beginning of the line</li>
+<li><code>a</code> - insert after cursor</li>
+<li><code>A</code> - insert at the end of the line</li>
+<li><code>o</code> - insert a new line below the current line</li>
+<li><code>O</code> - insert a new line above the current line</li>
+<li><code>r</code> - replace one character</li>
+<li><code>R</code> - replace multiple characters</li>
+<li><code>s</code> - substitute one character</li>
+<li><code>S</code> - substitute entire line</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://haoyuwang141.github.io/2024/10/28/Vim/" data-id="cm31lix1z0002i4rscwvp0yat" data-title="Vim" class="article-share-link">Share</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-hexo" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2024/10/28/hexo/" class="article-date">
+  <time class="dt-published" datetime="2024-10-28T13:04:43.212Z" itemprop="datePublished">2024-10-28</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2024/10/28/hexo/">hexo</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://haoyuwang141.github.io/2024/10/28/hexo/" data-id="cm2t1qdo500022crsd65be8gz" data-title="hexo" class="article-share-link">Share</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-venv" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2023/06/13/venv/" class="article-date">
+  <time class="dt-published" datetime="2023-06-13T05:28:18.000Z" itemprop="datePublished">2023-06-13</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2023/06/13/venv/">venv</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="venv-常用命令"><a href="#venv-常用命令" class="headerlink" title="venv 常用命令"></a>venv 常用命令</h1><p>在 Python 的虚拟环境（venv）中，有一些常用的命令可以帮助您管理和使用虚拟环境。以下是一些常见的 venv 命令：</p>
+<ol>
+<li><p>创建虚拟环境：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python3 -m venv myenv</span><br></pre></td></tr></table></figure>
+
+<p>上述命令将创建一个名为 “myenv” 的虚拟环境。</p>
+</li>
+<li><p>激活虚拟环境：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">source myenv/bin/activate</span><br></pre></td></tr></table></figure>
+
+<p>通过上述命令，您可以激活名为 “myenv” 的虚拟环境。一旦激活，您在终端中执行的 Python 命令和安装的包都将与该虚拟环境关联。</p>
+</li>
+<li><p>退出虚拟环境：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">deactivate</span><br></pre></td></tr></table></figure>
+
+<p>使用上述命令，您可以退出当前激活的虚拟环境。</p>
+</li>
+<li><p>查看已安装的包：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip list</span><br></pre></td></tr></table></figure>
+
+<p>该命令将显示当前虚拟环境中安装的所有包的列表。</p>
+</li>
+<li><p>安装包：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install package_name</span><br></pre></td></tr></table></figure>
+
+<p>使用上述命令，您可以在虚拟环境中安装指定的包。</p>
+</li>
+<li><p>卸载包：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip uninstall package_name</span><br></pre></td></tr></table></figure>
+
+<p>通过上述命令，您可以从虚拟环境中卸载指定的包。</p>
+</li>
+<li><p>删除虚拟环境</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rm -r venv</span><br></pre></td></tr></table></figure></li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://haoyuwang141.github.io/2023/06/13/venv/" data-id="cm2t1qdo700042crs6ans1u47" data-title="venv" class="article-share-link">Share</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-Utils" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2023/06/10/Utils/" class="article-date">
+  <time class="dt-published" datetime="2023-06-09T16:55:46.000Z" itemprop="datePublished">2023-06-10</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2023/06/10/Utils/">Utils</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h2 id="Docker-项目"><a href="#Docker-项目" class="headerlink" title="Docker 项目"></a>Docker 项目</h2><h3 id="Portainer-Docker图形化后台"><a href="#Portainer-Docker图形化后台" class="headerlink" title="Portainer Docker图形化后台"></a>Portainer Docker图形化后台</h3><h3 id="AList-文件管理"><a href="#AList-文件管理" class="headerlink" title="AList 文件管理"></a>AList 文件管理</h3><h3 id="chevereto-图床"><a href="#chevereto-图床" class="headerlink" title="chevereto 图床"></a>chevereto 图床</h3><h3 id=""><a href="#" class="headerlink" title=""></a></h3>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://haoyuwang141.github.io/2023/06/10/Utils/" data-id="cm2t1qdo400012crsc4aahomr" data-title="Utils" class="article-share-link">Share</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-mysql" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2023/06/09/mysql/" class="article-date">
+  <time class="dt-published" datetime="2023-06-09T15:42:34.000Z" itemprop="datePublished">2023-06-09</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2023/06/09/mysql/">mysql 8</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="MySQL-8"><a href="#MySQL-8" class="headerlink" title="MySQL 8"></a>MySQL 8</h1><h2 id="修改密码"><a href="#修改密码" class="headerlink" title="修改密码"></a>修改密码</h2><p><strong>MySql 从8.0</strong>开始修改密码有了变化，在user表加了字段authentication_string，修改密码前先检查authentication_string是否为空</p>
+<ul>
+<li>如果不为空 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">use mysql; </span><br><span class="line"> </span><br><span class="line"><span class="keyword">update</span> <span class="keyword">user</span> <span class="keyword">set</span> authentication_string<span class="operator">=</span><span class="string">&#x27;&#x27;</span> <span class="keyword">where</span> <span class="keyword">user</span><span class="operator">=</span><span class="string">&#x27;root&#x27;</span>;<span class="comment">--将字段置为空</span></span><br><span class="line"> </span><br><span class="line"><span class="keyword">ALTER</span> <span class="keyword">user</span> <span class="string">&#x27;root&#x27;</span>@<span class="string">&#x27;localhost&#x27;</span> IDENTIFIED <span class="keyword">BY</span> <span class="string">&#x27;root&#x27;</span>;<span class="comment">--修改密码为root</span></span><br></pre></td></tr></table></figure></li>
+<li>如果为空直接修改 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">ALTER</span> <span class="keyword">user</span> <span class="string">&#x27;root&#x27;</span>@<span class="string">&#x27;localhost&#x27;</span> IDENTIFIED <span class="keyword">BY</span> <span class="string">&#x27;newpassword&#x27;</span>;</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h2 id="设置MySQL远程登陆"><a href="#设置MySQL远程登陆" class="headerlink" title="设置MySQL远程登陆"></a>设置MySQL远程登陆</h2><ol>
+<li><p>以root用户登录MySQL</p>
+</li>
+<li><p>输入语句，进入mysql数据库：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">use mysql</span><br></pre></td></tr></table></figure>
+
+
+</li>
+<li><p>查询当前用户的Host属性</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select User, Host from user;</span><br></pre></td></tr></table></figure>
+
+
+</li>
+<li><p>更新域属性，‘%’ 表示允许任意ip地址访问：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">update user set host=&#x27;%&#x27; where user =&#x27;root&#x27;;</span><br></pre></td></tr></table></figure>
+
+
+</li>
+<li><p>后执行：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">FLUSH PRIVILEGES;</span><br></pre></td></tr></table></figure>
+
+
+</li>
+<li><p>再执行授权语句：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">GRANT ALL PRIVILEGES ON *.* TO &#x27;root&#x27;@&#x27;%&#x27; WITH GRANT OPTION;</span><br></pre></td></tr></table></figure></li>
+</ol>
+<h2 id="用户"><a href="#用户" class="headerlink" title="用户"></a>用户</h2><p>增加用户</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">USER</span> <span class="string">&#x27;username&#x27;</span>@<span class="string">&#x27;host&#x27;</span> IDENTIFIED <span class="keyword">BY</span> <span class="string">&#x27;password&#x27;</span>;</span><br></pre></td></tr></table></figure>
+
+<p>赋予权限</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">GRANT</span> <span class="keyword">ALL</span> PRIVILEGES <span class="keyword">ON</span> <span class="operator">*</span>.<span class="operator">*</span> <span class="keyword">TO</span> <span class="string">&#x27;username&#x27;</span>@<span class="string">&#x27;host&#x27;</span>;</span><br></pre></td></tr></table></figure>
+
+
+
+<p>删除用户</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">DROP</span> <span class="keyword">USER</span> <span class="string">&#x27;username&#x27;</span>@<span class="string">&#x27;host&#x27;</span>;</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="数据库"><a href="#数据库" class="headerlink" title="数据库"></a>数据库</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">create database &lt;database_name&gt;;</span><br><span class="line">drop database &lt;database_name&gt;;</span><br><span class="line">show databases;</span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://haoyuwang141.github.io/2023/06/09/mysql/" data-id="cm2t1qdo600032crs98cl26yk" data-title="mysql 8" class="article-share-link">Share</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-RESTful" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2023/05/08/RESTful/" class="article-date">
+  <time class="dt-published" datetime="2023-05-08T06:24:27.000Z" itemprop="datePublished">2023-05-08</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2023/05/08/RESTful/">RESTful</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://haoyuwang141.github.io/2023/05/08/RESTful/" data-id="cm2t1qdnz00002crsbqmh8doe" data-title="RESTful" class="article-share-link">Share</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-Notes/Mathematical Modeling" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2023/05/01/Notes/Mathematical%20Modeling/" class="article-date">
+  <time class="dt-published" datetime="2023-04-30T16:00:00.000Z" itemprop="datePublished">2023-05-01</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2023/05/01/Notes/Mathematical%20Modeling/">Mathematical Modeling</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="数学建模"><a href="#数学建模" class="headerlink" title="数学建模"></a>数学建模</h1><p>作者：王浩羽</p>
+<h2 id="模型学习"><a href="#模型学习" class="headerlink" title="模型学习"></a>模型学习</h2><h3 id="五大模型"><a href="#五大模型" class="headerlink" title="五大模型"></a>五大模型</h3><h4 id="预测模型-x2F-回归模型"><a href="#预测模型-x2F-回归模型" class="headerlink" title="预测模型 &#x2F; 回归模型"></a>预测模型 &#x2F; 回归模型</h4><ul>
+<li>神经网络预测模型</li>
+<li>灰色预测模型：数据非常少：7-15，不超过20</li>
+<li>拟合插值法（线性回归）</li>
+<li>时间序列模型：自变量为时间</li>
+<li>马尔可夫模型（Markov Model）</li>
+<li>支持向量机模型</li>
+<li>Logistic模型</li>
+<li>组合预测模型</li>
+<li>微分方程预测</li>
+</ul>
+<h4 id="评价模型"><a href="#评价模型" class="headerlink" title="评价模型"></a>评价模型</h4><ul>
+<li>模糊综合评价法</li>
+<li>层次分析法</li>
+<li>聚类分析法</li>
+<li>主成分分析评价法：（寻找关键自变量，进一步应用于评价问题、回归问题）</li>
+<li>灰色综合评价法</li>
+<li>人工神经网络评价法</li>
+<li>BP神经网络综合评价法</li>
+<li>组合评价法</li>
+</ul>
+<h4 id="优化模型"><a href="#优化模型" class="headerlink" title="优化模型"></a>优化模型</h4><ul>
+<li>规划模型，其中包括目标规划、线性规划、非线性规划、整数规划、动态规划</li>
+<li>排队论模型</li>
+<li>神经网络模型</li>
+<li>现代优化算法，其中包括遗传算法、模拟退火算法、蚁群算法、禁忌搜索算法</li>
+<li>图论模型</li>
+<li>组合优化模型</li>
+</ul>
+<h4 id="分类模型"><a href="#分类模型" class="headerlink" title="分类模型"></a>分类模型</h4><ul>
+<li>决策树</li>
+<li>逻辑回归</li>
+<li>随机森林</li>
+<li>朴素贝叶斯</li>
+</ul>
+<h4 id="统计分析模型"><a href="#统计分析模型" class="headerlink" title="统计分析模型"></a>统计分析模型</h4><ul>
+<li>均值T检验</li>
+<li>方差分析</li>
+<li>协方差分析</li>
+<li>分布检验</li>
+<li>相关分析</li>
+<li>卡方检验</li>
+<li>秩和检验</li>
+<li>回归分析</li>
+<li>Logistic回归</li>
+<li>聚类分析</li>
+<li>判别分析</li>
+<li>关联分析</li>
+</ul>
+<h3 id="十大算法"><a href="#十大算法" class="headerlink" title="十大算法"></a>十大算法</h3><ol>
+<li>蒙特卡罗算法</li>
+<li>数据拟合、参数估计、插值等数据处理算法</li>
+<li>线性规划、整数规划、多元规划、二次规划等规划类问题</li>
+<li>图论算法</li>
+<li>动态规划、回溯搜索、分治算法、分支定界等计算机算法</li>
+<li>最优化理论的三大非经典算法：模拟退火法、神经网络、遗传算法</li>
+<li>网格算法和穷举法</li>
+<li>一些连续离散化方法</li>
+<li>数值分析算法</li>
+<li>图象处理算法</li>
+</ol>
+<hr>
+<h2 id="代码编写"><a href="#代码编写" class="headerlink" title="代码编写"></a>代码编写</h2><h3 id="MATLAB"><a href="#MATLAB" class="headerlink" title="MATLAB"></a>MATLAB</h3><ul>
+<li>数据处理</li>
+<li>信号处理</li>
+<li>函数拟合</li>
+<li>图像绘制</li>
+</ul>
+<h3 id="Python"><a href="#Python" class="headerlink" title="Python"></a>Python</h3><p><strong>NumPy, Pandas</strong></p>
+<ul>
+<li>数据处理及分析</li>
+<li>不同点:<ul>
+<li>Pandas 处理表格和混杂数据, 比较契合统计分析中的表结构;</li>
+<li>NumPy 更适合处理统一的数值数组数据.</li>
+</ul>
+</li>
+</ul>
+<p><strong>Matplotlib</strong></p>
+<ul>
+<li>图像绘制</li>
+</ul>
+<p><strong>PyTorch</strong></p>
+<ul>
+<li>机器学习&#x2F;神经网络</li>
+</ul>
+<p><strong>SciPy</strong><br>SciPy 包含用于科学计算中常见问题的工具箱:</p>
+<ul>
+<li>文件输入&#x2F;输出 <code>scipy.io</code></li>
+<li>特殊函数 <code>scipy.special</code></li>
+<li>线性代数运算 <code>scipy.linalg</code></li>
+<li>插值 <code>scipy.interpolate</code></li>
+<li>优化(含数学规划), 拟合 <code>scipy.optimize</code></li>
+<li>统计和随机数 <code>scipy.stats</code></li>
+<li>数值积分 <code>scipy.integrate</code></li>
+<li>快速傅里叶变换 <code>scipy.fftpack</code></li>
+<li>信号处理 <code>scipy.signal</code></li>
+<li>图像处理 <code>scipy.ndimage</code></li>
+</ul>
+<hr>
+<h2 id="软件准备"><a href="#软件准备" class="headerlink" title="软件准备"></a>软件准备</h2><h3 id="翻译"><a href="#翻译" class="headerlink" title="翻译"></a>翻译</h3><ul>
+<li>知云文献翻译</li>
+<li>有道文档翻译</li>
+</ul>
+<h3 id="论文"><a href="#论文" class="headerlink" title="论文"></a>论文</h3><p>Word<br>LaTex</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://www.overleaf.com/">Overleaf</a>: 线上多人共享LaTex撰写平台</li>
+<li>Tex Live + VsCode: 本地, 推荐(因VsCode比TeXstudio好看)</li>
+<li>Tex Live + TeXstudio: 本地</li>
+</ul>
+<h3 id="绘图"><a href="#绘图" class="headerlink" title="绘图"></a>绘图</h3><p> <a target="_blank" rel="noopener" href="https://app.diagrams.net/">drawio</a>：用于结构图、树状图等逻辑图示的绘制</p>
+<h3 id="Python-环境"><a href="#Python-环境" class="headerlink" title="Python 环境"></a>Python 环境</h3><ul>
+<li>Anaconda + VsCode</li>
+<li>Jupyter Notebook</li>
+</ul>
+<h4 id="数学公式"><a href="#数学公式" class="headerlink" title="数学公式"></a>数学公式</h4><ul>
+<li>MathType：输入数学公式</li>
+<li>Mathpix：识别数学公式</li>
+</ul>
+<h3 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h3><ul>
+<li>Excel：用于简单计算</li>
+<li>SPSS（Statistical Product and Service Solutions）：统计分析</li>
+<li>Lindo&#x2F;Lingo：解决数学规划问题</li>
+<li>MATLAB</li>
+</ul>
+<hr>
+<h2 id="学习内容"><a href="#学习内容" class="headerlink" title="学习内容"></a>学习内容</h2><h3 id="论文写作"><a href="#论文写作" class="headerlink" title="论文写作"></a>论文写作</h3><p>视频：<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Na411w7c2">论文撰写参考视频</a></p>
+<h3 id="LaTeX"><a href="#LaTeX" class="headerlink" title="LaTeX"></a>LaTeX</h3><p>a. 文档+视频：<a target="_blank" rel="noopener" href="https://blog.csdn.net/qq1198768105/article/details/120615302">LaTex基础</a><br>b. 模板：（easyMCM）<br>c. 备注：出现电脑用户名（User）为中文而安装失败的问题，参考：<a target="_blank" rel="noopener" href="https://blog.csdn.net/wuyanxiushi/article/details/118864082">该博客</a></p>
+<h3 id="建模学习"><a href="#建模学习" class="headerlink" title="建模学习"></a>建模学习</h3><p>天津工业大学数学建模课程视频（使用软件：MATLAB、Lingo）：<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1iU4y1M7t9">该视频</a></p>
+<h3 id="机器学习"><a href="#机器学习" class="headerlink" title="机器学习"></a>机器学习</h3><p>参考书籍: 机器学习, 周志华 (西瓜书)<br>参考课程: <a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Wv411h7kN">李宏毅机器学习课程</a> (对应github：<a target="_blank" rel="noopener" href="https://github.com/Fafa-DL/Lhy_Machine_Learning">Lhy_Machine_Learning</a>)<br>sklearn 入门课程：<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1aV411e7CJ">https://www.bilibili.com/video/BV1aV411e7CJ</a><br>PyTorch 参考书籍(于GitHub上): <a target="_blank" rel="noopener" href="https://github.com/chenyuntc/pytorch-book">深度学习框架PyTorch 入门与实战</a></p>
+<hr>
+<h2 id="论文大纲"><a href="#论文大纲" class="headerlink" title="论文大纲"></a>论文大纲</h2><h3 id="美赛"><a href="#美赛" class="headerlink" title="美赛"></a>美赛</h3><ol>
+<li>Title + Summary(需准备) + Keywords</li>
+<li>Introduction</li>
+<li>Assumption and Justifications</li>
+<li>Notations (and Glossary)</li>
+<li>Model Ⅰ Ⅱ Ⅲ</li>
+<li>(Data Description)</li>
+<li>Sensitivity Analysis</li>
+<li>Model Evaluation and Further Discussion</li>
+<li>Conclusion</li>
+<li>References</li>
+<li>Appendices</li>
+<li>(Memo or Letter or Article)</li>
+</ol>
+<hr>
+<h2 id="文档"><a href="#文档" class="headerlink" title="文档"></a>文档</h2><p>MATLAB中文文档: <a target="_blank" rel="noopener" href="https://ww2.mathworks.cn/help/matlab">https://ww2.mathworks.cn/help/matlab</a></p>
+<p>Lingo英文文档: <a target="_blank" rel="noopener" href="https://www.lindo.com/downloads/PDF/LINGO.pdf">https://www.lindo.com/downloads/PDF/LINGO.pdf</a></p>
+<p>sklearn 中文文档: <a target="_blank" rel="noopener" href="https://www.sklearncn.cn/">https://www.sklearncn.cn/</a></p>
+<p>sklearn Map: <a target="_blank" rel="noopener" href="https://scikit-learn.org/stable/tutorial/machine_learning_map/">https://scikit-learn.org/stable/tutorial/machine_learning_map/</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://haoyuwang141.github.io/2023/05/01/Notes/Mathematical%20Modeling/" data-id="cm2t1qdod000c2crseqkq84mu" data-title="Mathematical Modeling" class="article-share-link">Share</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-演化算法" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2023/04/30/%E6%BC%94%E5%8C%96%E7%AE%97%E6%B3%95/" class="article-date">
+  <time class="dt-published" datetime="2023-04-29T16:00:00.000Z" itemprop="datePublished">2023-04-30</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2023/04/30/%E6%BC%94%E5%8C%96%E7%AE%97%E6%B3%95/">evolution computation</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="演化算法"><a href="#演化算法" class="headerlink" title="演化算法"></a>演化算法</h1><h2 id="PSO"><a href="#PSO" class="headerlink" title="PSO"></a>PSO</h2><p>Particle Swarm Optimization</p>
+<h2 id="CSO"><a href="#CSO" class="headerlink" title="CSO"></a>CSO</h2><h2 id="GA"><a href="#GA" class="headerlink" title="GA"></a>GA</h2><p>Genetic Algorithm 遗传算法</p>
+<h2 id="DE"><a href="#DE" class="headerlink" title="DE"></a>DE</h2><p>Differential Evolution 差分进化算法</p>
+<h2 id="NES"><a href="#NES" class="headerlink" title="NES"></a>NES</h2><p>Natural Evolution Strategies</p>
+<h2 id="ES"><a href="#ES" class="headerlink" title="ES"></a>ES</h2><p>Evolution Strategies 进化策略算法</p>
+<h2 id="PGPE"><a href="#PGPE" class="headerlink" title="PGPE"></a>PGPE</h2><p>Parameter-exploring Policy Gradients with Exploration</p>
+<h2 id="NEAT"><a href="#NEAT" class="headerlink" title="NEAT"></a>NEAT</h2>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://haoyuwang141.github.io/2023/04/30/%E6%BC%94%E5%8C%96%E7%AE%97%E6%B3%95/" data-id="cm2t1qdo800052crsdsjpc61d" data-title="evolution computation" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E7%AE%97%E6%B3%95/" rel="tag">算法</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+
+
+  <nav id="page-nav">
+    
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
+  </nav>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%AE%97%E6%B3%95/" rel="tag">算法</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/%E7%AE%97%E6%B3%95/" style="font-size: 10px;">算法</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/11/">November 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/10/">October 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/06/">June 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/05/">May 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/04/">April 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/03/">March 2023</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2024/11/03/Java/">Java</a>
+          </li>
+        
+          <li>
+            <a href="/2024/10/29/Java-keyword/">Java keyword transient</a>
+          </li>
+        
+          <li>
+            <a href="/2024/10/28/Vim/">Vim</a>
+          </li>
+        
+          <li>
+            <a href="/2024/10/28/hexo/">hexo</a>
+          </li>
+        
+          <li>
+            <a href="/2023/06/13/venv/">venv</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2024 Haoyu Wang<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.4.1.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>

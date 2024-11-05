@@ -117,16 +117,38 @@
 <p>类型转换：自动（精度损失）、强制</p>
 <p>引用数据类型：class, interface, array, enum, annotation</p>
 <p>包装箱与拆装箱：BOX</p>
-<h4 id="Control-Process"><a href="#Control-Process" class="headerlink" title="Control Process"></a>Control Process</h4><p>if…else if…else; switch case; for&#x2F;foreach; while; do…while</p>
+<h4 id="Control-Process"><a href="#Control-Process" class="headerlink" title="Control Process"></a>Control Process</h4><ul>
+<li>if…else if…else</li>
+<li>switch case</li>
+<li>for&#x2F;foreach</li>
+<li>while; do…while</li>
+</ul>
 <h4 id="Object-Oriented"><a href="#Object-Oriented" class="headerlink" title="Object-Oriented"></a>Object-Oriented</h4><p>Class, Abstract Class, Interface</p>
-<p>Encapsulation, Inharitance, Polymorphism</p>
-<p>Override(!!!: Non-private, Non-static), Overload, Hide</p>
+<p>面向对象的三个特性:</p>
+<ul>
+<li>Encapsulation (封装)</li>
+<li>Inharitance (继承)</li>
+<li>Polymorphism (多态)</li>
+</ul>
+<p><strong>重要概念:</strong></p>
+<ul>
+<li>Override (重写&#x2F;覆写): 父类的实例方法被子类重新实现. 注意: 实例方法为非Static修饰的方法;</li>
+<li>Overload (重载): 同一个类中, 名字相同但参数列表不同的多个方法;</li>
+<li>Hide (隐藏): 一个类的 <em>属性\静态方法\内部类</em> 可以分别隐藏其父类中可以访问到的具有相同名字(方法签名)的所有 <em>属性\静态方法\内部类</em>;</li>
+<li>Shadow (遮蔽): 一个 <em>变量\方法\类</em> 可以分别遮蔽在类内部具有相同名字(方法签名)的 <em>变量\方法\类</em>;</li>
+<li>遮掩: 一个变量可以遮掩具有相同名字的一个类, 只要它们都在相同范围内. 相似的, 一个变量或类型可以遮掩一个包.</li>
+</ul>
 <p>代码块、静态代码块</p>
 <p>权限修饰符：private, (default), protected, public</p>
 <p>Sealed Class(密封类)</p>
-<h4 id="Exception"><a href="#Exception" class="headerlink" title="Exception"></a>Exception</h4><p>try…catch…finally: notice “return”</p>
-<p>throw&#x2F;throws</p>
-<p>try-with-source: jdk8引入，jdk9升级为：try(read; bufferedRead)</p>
+<h4 id="Exception"><a href="#Exception" class="headerlink" title="Exception"></a>Exception</h4><ul>
+<li><p>try…catch…finally: notice “return”</p>
+</li>
+<li><p>throw&#x2F;throws</p>
+</li>
+<li><p>try-with-source: jdk8引入，jdk9升级为</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">Reader</span> <span class="variable">reader</span> <span class="operator">=</span> ...;</span><br><span class="line"><span class="type">BufferedReader</span> <span class="variable">bufferedReader</span> <span class="operator">=</span> ...;</span><br><span class="line"><span class="keyword">try</span>(reader; bufferedReader) &#123;</span><br><span class="line">    </span><br><span class="line">&#125; <span class="keyword">catch</span> (...) &#123;</span><br><span class="line">    </span><br><span class="line">&#125; <span class="keyword">finally</span> &#123;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
 <h4 id="代码组织管理"><a href="#代码组织管理" class="headerlink" title="代码组织管理"></a>代码组织管理</h4><p>Module(模块化): module, requires, export, opens, provides, uses</p>
 <p>module-info.java</p>
 <p>大型项目常基于DDD方式提供整洁架构</p>
@@ -136,33 +158,53 @@
 <li>infrastructure：基础层</li>
 <li>interfeces：用户接口层</li>
 </ul>
-<h3 id="Core"><a href="#Core" class="headerlink" title="Core"></a>Core</h3><h4 id="Reflection"><a href="#Reflection" class="headerlink" title="Reflection"></a>Reflection</h4><p>Class.forName, Obj.class, getClass(), loadClass()</p>
+<hr>
+<h3 id="Core"><a href="#Core" class="headerlink" title="Core"></a>Core</h3><h4 id="Reflection"><a href="#Reflection" class="headerlink" title="Reflection"></a>Reflection</h4><ul>
+<li>GET a class: <ul>
+<li><code>Class.forName(&#39;xxx.xxx.Obj&#39;)</code>: 得到已经初始化完成的类</li>
+<li><code>Obj.class</code></li>
+<li><code>Obj obj = new Obj(); obj.getClass()</code></li>
+<li><code>Classloader.loadClass(&#39;xxx.xxx.Obj&#39;)</code>: 得到未初始化的类</li>
+</ul>
+</li>
+</ul>
 <p>field&#x2F;method&#x2F;other info</p>
 <p><strong>Proxy (代理)</strong></p>
 <p>常用于日志、鉴权等通用功能</p>
 <ul>
-<li>静态代理：代理类和委托类的关系在运行前确定，但是要写的代码很多；</li>
-<li>动态代理：<ul>
+<li>静态代理：代理类和委托类的关系在运行前确定，但对于原对象的每一需要代理的方法都要在委托类里编码；</li>
+<li>动态代理：不需要写很多的代码<ul>
 <li>JDK代理：java.lang.reflection中的InvocationHandler接口和Proxy类</li>
 <li>cglib第三方包</li>
 </ul>
 </li>
 </ul>
-<h4 id="Collection"><a href="#Collection" class="headerlink" title="Collection"></a>Collection</h4><p>List: ArrayList, LinkedList, Queue, Vector(线程安全)</p>
-<p>Set: HashSet, TreeSet(有序)</p>
-<p>Map: HashMap(Key无序), TreeMap(Key有序), HashTable(线程安全)</p>
-<p>Iterator for Iterable</p>
-<p>Stream and Lambda：ParallelStream</p>
-<p>集合工具类（Collections&#x2F;Arrays）</p>
+<h4 id="Collection"><a href="#Collection" class="headerlink" title="Collection"></a>Collection</h4><ul>
+<li>List: ArrayList, LinkedList, Queue, Vector(线程安全)</li>
+<li>Set: HashSet, TreeSet(有序)</li>
+<li>Map: HashMap(Key无序), TreeMap(Key有序), HashTable(线程安全)</li>
+<li>Iterator for Iterable</li>
+<li>Stream and Lambda：ParallelStream</li>
+<li>集合工具类（Collections&#x2F;Arrays）</li>
+</ul>
 <h4 id="Generics"><a href="#Generics" class="headerlink" title="Generics"></a>Generics</h4><p>泛型</p>
-<h4 id="Multi-threading"><a href="#Multi-threading" class="headerlink" title="Multi-threading"></a>Multi-threading</h4><p><code>extends Thread</code> or <code>implements Runnable</code></p>
-<p><code>thread.start</code></p>
-<p>Thread Pool Executor</p>
-<p><strong>线程间通信</strong></p>
+<h4 id="Multi-threading"><a href="#Multi-threading" class="headerlink" title="Multi-threading"></a>Multi-threading</h4><p>创建线程:</p>
+<ul>
+<li><code>extends Thread</code> </li>
+<li><code>implements Runnable</code></li>
+</ul>
+<p>运行线程:</p>
+<ul>
+<li><code>thread.start</code></li>
+<li>Executor</li>
+</ul>
+<p>线程池: Thread Pool Executor</p>
+<p>线程间通信</p>
+<hr>
 <h3 id="Extend"><a href="#Extend" class="headerlink" title="Extend"></a>Extend</h3><h4 id="I-x2F-O"><a href="#I-x2F-O" class="headerlink" title="I&#x2F;O"></a>I&#x2F;O</h4><p>BIO: InputStream&#x2F;OutputStream, Reader&#x2F;Writer, Buffered</p>
 <p>NIO (Non-block): Channel + Buffer, Selector</p>
 <p>Netty 框架</p>
-<h4 id="Regular-Expression"><a href="#Regular-Expression" class="headerlink" title="Regular Expression"></a>Regular Expression</h4><h4 id="Database"><a href="#Database" class="headerlink" title="Database"></a>Database</h4><p>JDBC (Java Database Connectivity): </p>
+<h4 id="Database"><a href="#Database" class="headerlink" title="Database"></a>Database</h4><p>JDBC (Java Database Connectivity): </p>
 <p>ORM (Object Relation Mapping): 这是一种思想</p>
 <p>JPA (Java Persistance API): 是java持久化规范，是ORM框架的标准</p>
 <p>Mabatis：不严格遵循JPA规范</p>
@@ -170,14 +212,14 @@
 <p>REST：HTTP协议进行网络通信</p>
 <p>WebSocket: 基于TCP协议的应用层协议，通过HTTP&#x2F;HTTPs协议建立起双向通信的通道，实现实时数据传输</p>
 <h4 id="Security-安全类库"><a href="#Security-安全类库" class="headerlink" title="Security (安全类库)"></a>Security (安全类库)</h4><p>SecurityManager</p>
-
+<h4 id="Regular-Expression"><a href="#Regular-Expression" class="headerlink" title="Regular Expression"></a>Regular Expression</h4>
         <!-- 分类文章 -->
         
       </div>
       <div class="post-content-inner-space">
         
           <div class="space-toc-main animate__animated  animate__fadeInUp">
-            <ol class="space-toc"><li class="space-toc-item space-toc-level-2"><a class="space-toc-link" href="#Java"><span class="space-toc-text">Java</span></a></li></ol>
+            <ol class="space-toc"><li class="space-toc-item space-toc-level-2"><a class="space-toc-link" href="#Java"><span class="space-toc-text">Java</span></a><ol class="space-toc-child"><li class="space-toc-item space-toc-level-3"><a class="space-toc-link" href="#Basic"><span class="space-toc-text">Basic</span></a></li><li class="space-toc-item space-toc-level-3"><a class="space-toc-link" href="#Core"><span class="space-toc-text">Core</span></a></li><li class="space-toc-item space-toc-level-3"><a class="space-toc-link" href="#Extend"><span class="space-toc-text">Extend</span></a></li></ol></li></ol>
            </div>
         
       </div>
@@ -201,18 +243,6 @@
     </div>
     <div class="footer-contact">
     <ul class="footer-ul">
-        
-        <li class="footer-li">
-            <a href="https://github.com/FuShaoLei/hexo-theme-white" target="_blank">
-                <i class="ri-github-line"></i>
-            </a>
-        </li>
-        
-        <li class="footer-li">
-            <a href="mailto:1563250958@qq.com" target="_blank">
-                <i class="ri-mail-line"></i>
-            </a>
-        </li>
         
     </ul>
     </div>
